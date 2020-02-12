@@ -1,0 +1,9 @@
+<div class="comment-block" fxLayout="row">
+  <div class="user-img"></div>
+  <div>
+    <a *ngIf="author" [routerLink]="['/sections/main/author', comment.author]">
+      <p class="user-name">{{author?.username}}</p>
+    </a>
+    <p>{{comment?.body}}</p>
+  </div>
+</div>

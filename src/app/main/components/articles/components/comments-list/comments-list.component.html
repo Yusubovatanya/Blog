@@ -1,0 +1,5 @@
+<div class="" *ngFor="let comment of commentList">
+  <app-comment-item [comment]="comment"></app-comment-item>
+</div>
+<button mat-raised-button color="primary" (click)="showMore()" [disabled]="lastPage">Show more</button>
+

@@ -1,0 +1,8 @@
+<div class="wrapper">
+  <h2 class="title">{{author?.username}}</h2>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between start">
+    <div *ngFor="let article of articleList" fxFlex="50" fxFlex.xs="100">
+      <app-article-item [article]="article"></app-article-item>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="wrapper">
+  <h2 class="title">{{author?.username}}</h2>
+  <div>
+    <mat-card class="card">
+      <mat-card-header>
+        <div mat-card-avatar class="avatar" *ngIf="article?.author">
+          <a [routerLink]="['/sections/main/author', article.author]">
+            <div class="author-image"> </div>
+          </a>
+        </div>
+        <mat-card-title class="title-card">
+          {{article?.title}}
+        </mat-card-title>
+        <mat-card-subtitle *ngIf="article?.author">
+          <a [routerLink]="['/sections/main/author', article?.author]">
+            Author: {{author?.username}}
+          </a>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <div class="image-card"></div>
+      <div class="description">
+        <div class="description_text">
+          <p>
+            {{article?.body}}
+          </p>
+        </div>
+      </div>
+      <mat-card-actions>
+      </mat-card-actions>
+      <app-comments-list [id]="article?.id"></app-comments-list>
+    </mat-card>
+  </div>
+</div>

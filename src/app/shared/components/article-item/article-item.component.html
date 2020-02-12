@@ -1,0 +1,30 @@
+   <mat-card class="card">
+     <mat-card-header class="header">
+       <div mat-card-avatar class="avatar">
+         <a [routerLink]="['/sections/main/author', article.author]">
+           <div class="author-image"> </div>
+         </a>
+       </div>
+       <mat-card-title class="title">
+         <a [routerLink]="['/sections/main/articles', article.id]"> {{article.title}} </a>
+       </mat-card-title>
+       <mat-card-subtitle>
+         <a [routerLink]="['/sections/main/author', article.author]">
+           Author: {{author?.username}}
+         </a>
+       </mat-card-subtitle>
+     </mat-card-header>
+     <div class="image-card"></div>
+     <div class="description">
+       <div class="description_text">
+         <p>
+           {{article?.body}}
+         </p>
+       </div>
+     </div>
+     <mat-card-actions>
+       <a [routerLink]="['/sections/main/articles', article.id]">
+         <button mat-button>Read article</button>
+       </a>
+     </mat-card-actions>
+   </mat-card>

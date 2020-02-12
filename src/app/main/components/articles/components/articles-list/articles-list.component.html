@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <h1 class="title">Welcome to our blog! </h1>
+  <div fxLayout="row wrap" fxLayoutAlign="space-between start">
+    <div *ngFor="let article of articleList" fxFlex="50" fxFlex.xs="100">
+      <app-article-item [article]="article"></app-article-item>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" (click)="showMore()" [disabled]="lastPage">Show more</button>
+</div>
